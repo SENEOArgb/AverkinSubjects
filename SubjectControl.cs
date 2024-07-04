@@ -11,7 +11,8 @@ namespace Subjects
         public Subject[] subjects;
         public int length;
 
-        public SubjectControl(int size) {
+        public SubjectControl(int size)
+        {
 
             subjects = new Subject[size];
             length = 0;
@@ -38,11 +39,11 @@ namespace Subjects
 
         public void SaveToTxt(string filename)
         {
-            using(StreamWriter sw = new StreamWriter(filename))
+            using (StreamWriter sw = new StreamWriter(filename))
             {
                 for (int i = 0; i < length; i++)
                 {
-                    sw.WriteLine($"Название дисциплины {subjects[i].SubjectName}, Семестр: {subjects[i].Halfyear}, Форма экзамена: {subjects[i].FormExam}");
+                    sw.WriteLine($"Название дисциплины: {subjects[i].SubjectName}; Семестр: {subjects[i].Halfyear}; Форма экзамена: {subjects[i].FormExam}");
                 }
             }
         }
