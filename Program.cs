@@ -26,7 +26,7 @@ namespace Subjects
 
             SubjectControl subjects = new SubjectControl(sizeAr);
 
-            for (int i=0; i < sizeAr; i++)
+            for (int i = 0; i < sizeAr; i++)
             {
                 Console.WriteLine($"Введите название предмета {i}:");
                 string subjName = "";
